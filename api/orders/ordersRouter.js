@@ -23,7 +23,7 @@ router.get("/", async (req, res, next) => {
 });
 
 //Post a new order
-router.get("/", async (req, res, next) => {
+router.post("/", async (req, res, next) => {
   try {
     const rows = await Model.postOrder(req.body);
     res.status(200).json(rows);
